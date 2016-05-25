@@ -1,7 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp/")
-
-(load "~/.emacs.d/packages.el")
-(load "~/.emacs.d/ergoemacs.el")
 (load "~/.emacs.d/ibuffer.el")
 
 (require 'ido-mode
@@ -17,3 +13,6 @@
 ;;(menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+
+(setq-default indent-tabs-mode nul)
+(setq tab-width 4)
