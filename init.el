@@ -44,9 +44,25 @@
 (require 'emacs-packages)
 (require 'emacs-ui)
 (require 'emacs-core)
+(require 'emacs-editor)
+(require 'emacs-keybinding)
 
 ;; OSX specific settings
 (when (eq system-type 'darwin)
   (require 'prelude-osx))
 
+(setq-default user-full-name   "aleksmool"
+              user-mail-adress "aleksmooll@gmail.com")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (which-key smart-mode-line flycheck beacon))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

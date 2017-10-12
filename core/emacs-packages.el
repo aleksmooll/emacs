@@ -15,7 +15,10 @@
 
 (defvar emacs-packages
   '(
-    flycheck)
+    beacon
+    flycheck
+    smart-mode-line
+    which-key)
   "A list of packages to ensure are installed at launch.")
 
 (defun emacs-packages-installed-p ()
