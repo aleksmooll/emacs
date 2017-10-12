@@ -10,6 +10,8 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+
 
 (defvar emacs-packages
   '(
@@ -18,13 +20,13 @@
 
 (defun emacs-packages-installed-p ()
   "Check if all packages in 'emacs-packages' are installed."
-  (every #'packages-installed-p emacs-packages))
+  (every #'package-installed-p emacs-packages))
 
 (defun emacs-require-package (package)
   "Install PACKAGE unless already installed."
   (unless (memq package emacs-packages)
     (add-to-list 'emacs-packages package))
-  (unless (package-install-p package)
+  (unless (package-installed-p package)
     (package-install package)))
 
 (defun emacs-require-packages (packages)
